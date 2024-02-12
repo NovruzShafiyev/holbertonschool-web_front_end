@@ -1,0 +1,19 @@
+/* Write a Sass file that creates a class for each name in the list $list-names and assigns the background image based
+You must use @import
+You must use @each statement
+ */
+
+
+@import "backgrounds/a.jpg";
+@import "backgrounds/b.jpg";
+@import "backgrounds/c.jpg";
+@import "backgrounds/d.jpg";
+
+$list-names: ("a", "b", "c", "d");
+
+
+@each $name in $list-names {
+  .background-#{$name} {
+    background-image: url('#{$name}.jpg');
+  }
+}

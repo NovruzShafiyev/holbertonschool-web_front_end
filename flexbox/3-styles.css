@@ -555,7 +555,7 @@
   
 /* Section Latest news
  ============================= */
-  .section-latest-news .row{
+  .section-latest-news .row {
     flex-direction: row-reverse;
   }
 
@@ -565,7 +565,7 @@
   .section-services .row {
     flex-wrap: wrap;
   }
-  
+
 
   /*** 4. CARD ***/
   

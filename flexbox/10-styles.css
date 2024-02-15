@@ -534,11 +534,18 @@ ul.row {
 /* Section HERO
       ============================= */
 
-
-
 .section-hero {
   position: relative;
   margin-top: -8.5rem;
+}
+
+.section-hero .section-body {
+  padding: 10rem 4rem;
+}
+
+.section-hero .section-category {
+  color: var(--color-white);
+  text-transform: uppercase;
 }
 
 .hero-hompage {
@@ -546,15 +553,6 @@ ul.row {
   background-repeat: no-repeat;
   background-size: 90rem auto;
   background-color: #010101;
-}
-
-.section-hero .section-body{
-  padding: 10rem 4rem;
-}
-
-.section-hero .section-category{
-  color: var(--color-white);
-  text-transform: uppercase;
 }
 
 .section-hero .section-title {

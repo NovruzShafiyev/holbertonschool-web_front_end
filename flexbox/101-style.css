@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  .box1 {
+    font-size: 3rem;
+    background-color: blue;
+  }
+  .box2 {
+    font-size: 4rem;
+    background-color: red;
+  }
+  .box3 {
+    font-size: 7rem;
+    background-color: greenyellow;
+  }
+  .box4 {
+    font-size: 4rem;
+    background-color: violet;
+  }
+  .box5 {
+    font-size: 3rem;
+    background-color: salmon;
+  }
+}

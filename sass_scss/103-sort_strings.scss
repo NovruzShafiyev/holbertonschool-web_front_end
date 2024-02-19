@@ -1,10 +1,17 @@
 // Write a Sass file that sorts the variable $list_to_sort and prints the sorted list in the debug output.
 
+$list_to_sort: john anna zoe kim felicia carrie;
 
-$list_to_sort: john, anna, zoe, kim, felicia, carrie;
+$list_of_letters: a b c d e f g h i j k l m n o p q r s t u v w x y z;
 
-$list_sorted: sort($list_to_sort);
+@function sort($list) {
+  $sorted_list: ();
+  @each $letter in $list_of_letters {
+    @if index($list, $letter) {
+      $sorted_list: append($sorted_list, $letter);
+    }
+  }
+  @return $sorted_list;
+}
 
-@debug "Sorted List: #{$list_sorted}";
-
-
+@debug sort($list_to_sort);

@@ -17,3 +17,6 @@ const addBy1000 = addBy(1000);
 const divideBy10 = divideBy(10);
 
 const divideBy100 = divideBy(100);
+
+
+console.log(addBy100(20)); // 120

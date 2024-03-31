@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Task 8</title>
+  <title>Task 9</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
     #pagination {
@@ -22,6 +22,10 @@
     #pagination li.active {
       font-weight: bold;
     }
+
+    .loading {
+      opacity: 0.2;
+    }
   </style>
 </head>
 
@@ -38,6 +42,7 @@
       }
 
       function queryWikipedia(search, offset = 0) {
+        displayLoading(true); // Show loading
         $.ajax({
           url: "https://en.wikipedia.org/w/api.php",
           data: {
@@ -60,6 +65,9 @@
           },
           error: function(error) {
             console.log("Error:", error);
+          },
+          complete: function() {
+            displayLoading(false); // Hide loading
           }
         });
       }
@@ -101,9 +109,17 @@
           paginationList.append(listItem);
         }
 
-        // Remove previous active class and add it to the current page
         paginationList.find('.active').removeClass('active');
         paginationList.find('li').eq(currentOffset / itemsPerPage).addClass('active');
+      }
+
+      function displayLoading(loading) {
+        let ulElement = $("ul:first");
+        if (loading) {
+          ulElement.wrap('<div class="loading"></div>');
+        } else {
+          ulElement.unwrap();
+        }
       }
 
       createSearchForm();
